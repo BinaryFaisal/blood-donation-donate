@@ -265,7 +265,6 @@ body {
 
 .drop-container {
     background-color: #fff;
-    position: relative;
     display: flex;
     gap: 10px;
     flex-direction: column;
