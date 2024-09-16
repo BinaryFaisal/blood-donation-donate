@@ -150,25 +150,25 @@ document.getElementById('district').addEventListener('change', function () {
 });
 
 // Form submission logic and popup handling
-document.getElementById('registrationForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission for demonstration purposes
+// document.getElementById('registrationForm').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent form submission for demonstration purposes
 
-    // Show the popup
-    var popup = document.getElementById('popup');
-    popup.style.display = 'block';
+//     // Show the popup
+//     var popup = document.getElementById('popup');
+//     popup.style.display = 'block';
 
-    // Close popup when "X" is clicked
-    document.getElementById('closePopup').onclick = function () {
-        popup.style.display = 'none';
-    };
+//     // Close popup when "X" is clicked
+//     document.getElementById('closePopup').onclick = function () {
+//         popup.style.display = 'none';
+//     };
 
-    // Close popup if the user clicks outside the popup content
-    window.onclick = function (event) {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    };
-});
+//     // Close popup if the user clicks outside the popup content
+//     window.onclick = function (event) {
+//         if (event.target === popup) {
+//             popup.style.display = 'none';
+//         }
+//     };
+// });
 
 // Script for Navigation bar
 let menuList = document.getElementById("menuList");
