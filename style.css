@@ -202,7 +202,47 @@ body {
 
 /* Body & Cards*/
 
-/* Feedback */
+/* New Error-success Messege start 16/9/24 */
+.error{
+    background-color: #c605122e;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(198, 5, 19, 1);
+    padding: 10px;
+    border: 2px solid rgba(198, 5, 19, 1);
+    border-radius: 5px;
+    margin: 5px 0px;
+    text-align: center;
+    /* display: none; */
+}
+
+.success{
+    background-color: #03d18c71;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: #00875a;
+    padding: 10px;
+    border: 2px solid #00875a;
+    border-radius: 5px;
+    margin: 5px 0px;
+    text-align: center;
+    /* display: none; */
+}
+
+@media (min-width: 440px){
+    .success, .error{
+        flex-direction: row;
+    }
+}
+/* New Error-success Messege end */
+
+/* Form */
 .donate-form {
     max-width: 768px;
     margin: 0px auto;
@@ -335,7 +375,7 @@ body {
 }
 
 /* Popup modal styling */
-.popup {
+/* .popup {
     display: none;
     position: fixed;
     top: 0;
@@ -395,7 +435,7 @@ body {
 .close:focus {
     color: black;
     text-decoration: none;
-}
+} */
 
 /* Footer */
 .footer-wrapper {
