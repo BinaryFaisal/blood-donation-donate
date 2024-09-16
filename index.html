@@ -55,7 +55,17 @@
     <!-- Body -->
     <main class="container">
         <div class="donate-form">
-            <form id="registrationForm">
+            <!-- New error and success msg start 16/9/24 -->
+            <div class="error">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p>You have submitted wrong information</p>
+            </div>
+            <div class="success">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>All information have been submitted successfully</p>
+            </div>
+            <!-- New error and success msg end -->
+            <form action="#" method="post">
                 <fieldset class="input_container">
                     <legend>Profile Picture</legend>
                     <label for="file-input" class="drop-container">
@@ -74,8 +84,7 @@
                 <fieldset class="input_container">
                     <legend>Phone Number</legend>
                     <i class="fa-solid fa-phone-volume"></i>
-                    <input type="text" name="phone" id="phone"
-                        placeholder="Enter phone number" required />
+                    <input type="text" id="phone" name="phone" maxlength="11" pattern="\d{11}" required placeholder="Enter 11-digit phone number">
                 </fieldset>
                 <fieldset class="input_container">
                     <legend>Blood Group</legend>
@@ -180,14 +189,13 @@
             </form>
         </div>
         <!-- Popup Modal -->
-        <div id="popup" class="popup">
+        <!-- <div id="popup" class="popup">
             <div class="popup-content">
-                <!-- <span id="closePopup" class="close">&times;</span> -->
                 <i class="fa-regular fa-circle-check"></i>
                 <p>Success</p>
                 <button><a href="#">Continue</a></button>
             </div>
-        </div>
+        </div> -->
     </main>
 
     <!-- Footer Section -->
