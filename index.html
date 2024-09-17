@@ -12,7 +12,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Donate</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -44,12 +44,7 @@
                 <li><a href="">Find Donors</a></li>
                 <li><a href="">Top Donors</a></li>
                 <li><a href="">Available Donors</a></li>
-                <li>
-                    <form action="#" method="post">
-                        <input type="text" name="phoneNumber" id="phoneNumber" style="display: none;">
-                        <input type="submit" value="Profile" style="background: none; margin: 0 auto; cursor: pointer;">
-                    </form>
-                </li>
+                <li><a href="">Profile</a></li>
             </ul>
             <div class="menu-icon">
                 <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
@@ -60,37 +55,7 @@
     <!-- Body -->
     <main class="container">
         <div class="donate-form">
-            <!-- New error and success msg start 16/9/24 -->
-            <div class="error">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <p>You have submitted wrong information</p>
-            </div>
-            <div class="success">
-                <i class="fa-regular fa-circle-check"></i>
-                <p>All information have been submitted successfully</p>
-            </div>
-            <!-- New error and success msg end -->
-            <form action="#" method="post">
-                <fieldset class="input_container">
-                    <legend>Profile Picture</legend>
-                    <label for="file-input" class="drop-container">
-                        <p class="form-paragraph">File should be an image</p>
-                        <span class="drop-title">Drop files here</span>
-                        or
-                        <input type="file" accept="image/*" required="" id="file-input">
-                    </label>
-                </fieldset>
-                <fieldset class="input_container">
-                    <legend>Full Name</legend>
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" name="fullName" id="fullName"
-                        placeholder="Enter Your Name" required />
-                </fieldset>
-                <fieldset class="input_container">
-                    <legend>Phone Number</legend>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <input type="text" id="phone" name="phone" maxlength="11" pattern="\d{11}" required placeholder="Enter 11-digit phone number">
-                </fieldset>
+            <form id="registrationForm">
                 <fieldset class="input_container">
                     <legend>Blood Group</legend>
                     <i class="fa-solid fa-droplet"></i>
@@ -190,17 +155,208 @@
                         <option value="">Select Police Station</option>
                     </select>
                 </fieldset>
+                <fieldset class="input_container">
+                    <legend>Patient Type</legend>
+                    <i class="fa-solid fa-bed-pulse"></i>
+                    <input type="text" name="patientType" id="patientType"
+                        placeholder="Ex-Accident, Pragnent, Operation, etc" required />
+                </fieldset>
                 <input type="submit" value="SUBMIT" />
             </form>
         </div>
-        <!-- Popup Modal -->
-        <!-- <div id="popup" class="popup">
-            <div class="popup-content">
-                <i class="fa-regular fa-circle-check"></i>
-                <p>Success</p>
-                <button><a href="#">Continue</a></button>
+        <!-- Donor not available 18/09/24 -->
+        <div class="donor-not-available">
+            <div class="donor-not-found">
+                <i class="fa-regular fa-face-frown"></i>
+            <p>Sorry! There aren't any donors available in your criteria.</p>
             </div>
-        </div> -->
+        </div>
+        <div class="donor-container">
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="donor-card">
+                <div class="donor-img">
+                    <img src="assets/images/profile.png" alt="">
+                </div>
+                <div class="donor-info">
+                    <div class="name">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Faisal Ahammod</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+8801 000 000 000</p>
+                    </div>
+                    <div class="blood-grp">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>A+</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Agrabad, Chattogram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer Section -->
